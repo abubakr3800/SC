@@ -418,7 +418,7 @@
         // Function to load API data
         async function loadApiData() {
             try {
-                const response = await fetch('api/data.json');
+                const response = await fetch('api/lighting_recommendations_by_age_env.json');
                 apiData = await response.json();
                 
                 // Set slider ranges based on API data for the selected grade

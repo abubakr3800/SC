@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <!-- Custom CSS -->
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +24,29 @@
     <style>
         .text-muted{
             color: #aaa !important;
+        }
+        
+        /* Fix text wrapping issues */
+        .card-body {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        .alert {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+        }
+        
+        /* Ensure cards have consistent height */
+        .card {
+            height: 100%;
+        }
+        
+        /* Prevent text overflow in parameter names */
+        .text-info {
+            word-break: break-word;
         }
     </style>
     <title>SChools - Classroom Simulator</title>
@@ -207,6 +233,8 @@
                                     <input type="range" id="luxSlider" class="form-range" min="0" max="1000" value="500" step="10">
                                 </div>
                             </div>
+
+                            div.col-6
                         </div>
 
                         <div class="text-center mt-4">
@@ -320,6 +348,19 @@
                 </div>
             </div>
         </div>
+
+        <!-- Recommendation Cards -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="text-warning mb-4">
+                    <i class="fas fa-lightbulb me-2"></i>
+                    Age-Based Recommendations
+                </h3>
+                <div class="row g-4" id="recommendationCards">
+                    <!-- Recommendation cards will be dynamically generated here -->
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- Bootstrap JS -->
@@ -330,6 +371,7 @@
         let selectedGrade = '';
         let selectedEnvironment = '';
         let apiData = null;
+        let updateTimeout = null;
 
         // Function to get cookie value
         function getCookie(name) {
@@ -368,8 +410,23 @@
         // Function to load API data
         async function loadApiData() {
             try {
-                const response = await fetch('api/data.json');
-                apiData = await response.json();
+                // Load both data files
+                const [dataResponse, recommendationsResponse] = await Promise.all([
+                    fetch('api/data.json'),
+                    fetch('api/lighting_recommendations_by_age_env.json')
+                ]);
+                
+                const dataJson = await dataResponse.json();
+                const recommendationsJson = await recommendationsResponse.json();
+                
+                // Merge the data for slider ranges and recommendations
+                apiData = {};
+                for (const grade in dataJson) {
+                    apiData[grade] = {
+                        ...dataJson[grade],
+                        recommendation_levels: recommendationsJson[grade]?.recommendation_levels || {}
+                    };
+                }
                 
                 // Set slider ranges based on API data for the selected grade
                 setSliderRanges();
@@ -386,7 +443,7 @@
             const gradeData = apiData[selectedGrade];
             
             // Set ranges for each parameter
-            if (gradeData.CCT) {
+            if (gradeData.CCT && Array.isArray(gradeData.CCT)) {
                 const cctSlider = document.getElementById('cctSlider');
                 const cctMin = Math.min(...gradeData.CCT.map(r => r.range.min));
                 const cctMax = Math.max(...gradeData.CCT.map(r => r.range.max));
@@ -397,7 +454,7 @@
                 document.getElementById('cctRange').textContent = `Range: ${cctMin} - ${cctMax} K`;
             }
             
-            if (gradeData.CRI) {
+            if (gradeData.CRI && Array.isArray(gradeData.CRI)) {
                 const criSlider = document.getElementById('criSlider');
                 const criMin = Math.min(...gradeData.CRI.map(r => r.range.min));
                 const criMax = Math.max(...gradeData.CRI.map(r => r.range.max));
@@ -408,7 +465,7 @@
                 document.getElementById('criRange').textContent = `Range: ${criMin} - ${criMax}`;
             }
             
-            if (gradeData.Flicker) {
+            if (gradeData.Flicker && Array.isArray(gradeData.Flicker)) {
                 const flickerSlider = document.getElementById('flickerSlider');
                 const flickerMin = Math.min(...gradeData.Flicker.map(r => r.range.min));
                 const flickerMax = Math.max(...gradeData.Flicker.map(r => r.range.max));
@@ -419,7 +476,7 @@
                 document.getElementById('flickerRange').textContent = `Range: ${flickerMin} - ${flickerMax}%`;
             }
             
-            if (gradeData.UGR) {
+            if (gradeData.UGR && Array.isArray(gradeData.UGR)) {
                 const glareSlider = document.getElementById('glareSlider');
                 const glareMin = Math.min(...gradeData.UGR.map(r => r.range.min));
                 const glareMax = Math.max(...gradeData.UGR.map(r => r.range.max));
@@ -431,7 +488,7 @@
             }
             
             // New parameters
-            if (gradeData.Uniformity) {
+            if (gradeData.Uniformity && Array.isArray(gradeData.Uniformity)) {
                 const uniformitySlider = document.getElementById('uniformitySlider');
                 const uniformityMin = Math.min(...gradeData.Uniformity.map(r => r.range.min));
                 const uniformityMax = Math.max(...gradeData.Uniformity.map(r => r.range.max));
@@ -442,7 +499,7 @@
                 document.getElementById('uniformityRange').textContent = `Range: ${uniformityMin} - ${uniformityMax}`;
             }
             
-            if (gradeData.Melanopic_EDI) {
+            if (gradeData.Melanopic_EDI && Array.isArray(gradeData.Melanopic_EDI)) {
                 const melanopicSlider = document.getElementById('melanopicSlider');
                 const melanopicMin = Math.min(...gradeData.Melanopic_EDI.map(r => r.range.min));
                 const melanopicMax = Math.max(...gradeData.Melanopic_EDI.map(r => r.range.max));
@@ -453,7 +510,7 @@
                 document.getElementById('melanopicRange').textContent = `Range: ${melanopicMin} - ${melanopicMax}`;
             }
             
-            if (gradeData.Vertical_Illuminance) {
+            if (gradeData.Vertical_Illuminance && Array.isArray(gradeData.Vertical_Illuminance)) {
                 const verticalSlider = document.getElementById('verticalSlider');
                 const verticalMin = Math.min(...gradeData.Vertical_Illuminance.map(r => r.range.min));
                 const verticalMax = Math.max(...gradeData.Vertical_Illuminance.map(r => r.range.max));
@@ -464,7 +521,7 @@
                 document.getElementById('verticalRange').textContent = `Range: ${verticalMin} - ${verticalMax} lux`;
             }
             
-            if (gradeData.Exposure_Duration) {
+            if (gradeData.Exposure_Duration && Array.isArray(gradeData.Exposure_Duration)) {
                 const exposureSlider = document.getElementById('exposureSlider');
                 const exposureMin = Math.min(...gradeData.Exposure_Duration.map(r => r.range.min));
                 const exposureMax = Math.max(...gradeData.Exposure_Duration.map(r => r.range.max));
@@ -475,7 +532,7 @@
                 document.getElementById('exposureRange').textContent = `Range: ${exposureMin} - ${exposureMax} hours`;
             }
             
-            if (gradeData.Lux) {
+            if (gradeData.Lux && Array.isArray(gradeData.Lux)) {
                 const luxSlider = document.getElementById('luxSlider');
                 const luxMin = Math.min(...gradeData.Lux.map(r => r.range.min));
                 const luxMax = Math.max(...gradeData.Lux.map(r => r.range.max));
@@ -485,6 +542,20 @@
                 document.getElementById('luxValue').textContent = luxSlider.value;
                 document.getElementById('luxRange').textContent = `Range: ${luxMin} - ${luxMax} lux`;
             }
+            
+            // Initialize recommendation cards with current values
+            const currentValues = {
+                CCT: parseInt(document.getElementById('cctSlider').value),
+                CRI: parseInt(document.getElementById('criSlider').value),
+                Flicker: parseInt(document.getElementById('flickerSlider').value),
+                UGR: parseInt(document.getElementById('glareSlider').value),
+                Uniformity: parseFloat(document.getElementById('uniformitySlider').value),
+                Melanopic_EDI: parseInt(document.getElementById('melanopicSlider').value),
+                Vertical_Illuminance: parseInt(document.getElementById('verticalSlider').value),
+                Exposure_Duration: parseInt(document.getElementById('exposureSlider').value),
+                Lux: parseInt(document.getElementById('luxSlider').value)
+            };
+            updateRecommendationCards(currentValues, gradeData);
         }
 
         // Function to update slider values
@@ -521,15 +592,21 @@
             
             // Compare each parameter
             for (let param in gradeData) {
-                if (param === 'age_range') continue;
+                if (param === 'age_range' || param === 'recommendation_levels') continue;
                 
                 const currentValue = currentValues[param];
                 const recommendations = gradeData[param];
                 
+                // Skip if recommendations is not an array
+                if (!Array.isArray(recommendations)) {
+                    console.warn(`Skipping ${param} - recommendations is not an array:`, recommendations);
+                    continue;
+                }
+                
                 comparisonHTML += `
                     <div class="col-md-6 col-lg-4">
-                        <div class="card bg-secondary bg-opacity-25 border-0 rounded-3">
-                            <div class="card-body">
+                        <div class="card bg-secondary bg-opacity-25 border-0 rounded-3 h-100">
+                            <div class="card-body" style="word-wrap: break-word; overflow-wrap: break-word;">
                                 <h5 class="text-info mb-3">${param}</h5>
                                 <p><strong class="text-warning">Current Value:</strong> ${currentValue} ${getUnit(param)}</p>
                 `;
@@ -538,19 +615,23 @@
                 let bestRating = 'unknown';
 
                 // Find the best matching recommendation
-                recommendations.forEach((rec, index) => {
-                    const min = rec.range.min;
-                    const max = rec.range.max;
-                    
-                    if (currentValue >= min && currentValue <= max) {
-                        bestMatch = rec;
-                        bestRating = rec.rating;
-                    }
-                });
+                if (Array.isArray(recommendations)) {
+                    recommendations.forEach((rec, index) => {
+                        const min = rec.range.min;
+                        const max = rec.range.max;
+                        
+                        if (currentValue >= min && currentValue <= max) {
+                            bestMatch = rec;
+                            bestRating = rec.rating;
+                        }
+                    });
+                } else {
+                    console.warn(`Recommendations for ${param} is not an array:`, recommendations);
+                }
 
                 if (bestMatch) {
                     comparisonHTML += `
-                        <div class="alert ${bestRating === 'good' ? 'alert-success' : 'alert-danger'} mt-2">
+                        <div class="alert ${bestRating === 'good' ? 'alert-success' : 'alert-danger'} mt-2" style="word-wrap: break-word; overflow-wrap: break-word;">
                             <strong>Rating:</strong> ${bestRating.toUpperCase()}<br>
                             <strong>Reason:</strong> ${bestMatch.reason}<br>
                             <strong>Recommendation:</strong> ${bestMatch.recommendation}
@@ -558,20 +639,192 @@
                     `;
                 } else {
                     comparisonHTML += `
-                        <div class="alert alert-warning mt-2">
+                        <div class="alert alert-warning mt-2" style="word-wrap: break-word; overflow-wrap: break-word;">
                             <strong>Rating:</strong> UNKNOWN<br>
                             <strong>Note:</strong> Current value doesn't match any specific range in our recommendations.
                         </div>
                     `;
                 }
 
-                comparisonHTML += '</div></div>';
+                comparisonHTML += `
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
 
             comparisonHTML += '</div>';
             
             document.getElementById('comparisonContent').innerHTML = comparisonHTML;
             document.getElementById('comparisonResults').style.display = 'block';
+            
+            // Update recommendation cards
+            updateRecommendationCards(currentValues, gradeData);
+        }
+
+        // Function to update recommendation cards based on age comparisons
+        function updateRecommendationCards(currentValues, gradeData) {
+            try {
+                const recommendationCardsContainer = document.getElementById('recommendationCards');
+                if (!recommendationCardsContainer) {
+                    console.error('Recommendation cards container not found');
+                    return;
+                }
+                
+                let recommendationHTML = '';
+
+                // Get all recommendation levels from the API data
+                const recommendationLevels = gradeData.recommendation_levels || {};
+                
+                console.log('Recommendation levels:', recommendationLevels);
+                
+                // Process each recommendation level
+                for (const level in recommendationLevels) {
+                    const levelData = recommendationLevels[level];
+                    const environments = levelData.environments || {};
+                    
+                    console.log(`Processing level: ${level}`, levelData);
+                    
+                    // Process each environment
+                    for (const environment in environments) {
+                        const envData = environments[environment];
+                        
+                        console.log(`Processing environment: ${environment}`, envData);
+                        
+                        // Calculate overall recommendation score for this environment
+                        let totalScore = 0;
+                        let totalParams = 0;
+                        let recommendations = [];
+                        
+                        for (const param in envData) {
+                            if (param === 'range') continue;
+                            
+                            const paramData = envData[param];
+                            const currentValue = currentValues[param];
+                            
+                            console.log(`Checking param: ${param}, current value: ${currentValue}`, paramData);
+                            
+                            if (currentValue !== undefined && paramData.range) {
+                                const { min, max } = paramData.range;
+                                
+                                if (currentValue >= min && currentValue <= max) {
+                                    totalScore += 1;
+                                    recommendations.push({
+                                        param: param,
+                                        status: 'Recommended',
+                                        reason: paramData.reason,
+                                        recommendation: paramData.recommendation
+                                    });
+                                } else {
+                                    recommendations.push({
+                                        param: param,
+                                        status: 'Not Recommended',
+                                        reason: `Value ${currentValue} ${getUnit(param)} is outside recommended range (${min}-${max} ${getUnit(param)})`,
+                                        recommendation: paramData.recommendation
+                                    });
+                                }
+                                totalParams += 1;
+                            }
+                        }
+                        
+                        // Calculate recommendation percentage
+                        const recommendationPercentage = totalParams > 0 ? (totalScore / totalParams) * 100 : 0;
+                        
+                        // Determine overall recommendation status
+                        let overallStatus, statusClass, statusIcon;
+                        if (recommendationPercentage >= 80) {
+                            overallStatus = 'Highly Recommended';
+                            statusClass = 'success';
+                            statusIcon = 'fas fa-star';
+                        } else if (recommendationPercentage >= 60) {
+                            overallStatus = 'Recommended';
+                            statusClass = 'warning';
+                            statusIcon = 'fas fa-check-circle';
+                        } else {
+                            overallStatus = 'Not Recommended';
+                            statusClass = 'danger';
+                            statusIcon = 'fas fa-exclamation-triangle';
+                        }
+                        
+                        // Create recommendation card
+                        recommendationHTML += `
+                            <div class="col-lg-6 col-xl-4 mb-4">
+                                <div class="card bg-secondary bg-opacity-25 border-0 rounded-4 h-100">
+                                    <div class="card-header bg-${statusClass} bg-opacity-25 border-0">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h5 class="text-${statusClass} mb-0">
+                                                <i class="${statusIcon} me-2"></i>
+                                                ${environment.charAt(0).toUpperCase() + environment.slice(1)}
+                                            </h5>
+                                            <span class="badge bg-${statusClass}">${recommendationPercentage.toFixed(0)}%</span>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="mb-3">
+                                            <h6 class="text-light">Overall Status: <span class="text-${statusClass}">${overallStatus}</span></h6>
+                                            <div class="progress bg-dark">
+                                                <div class="progress-bar bg-${statusClass}" role="progressbar" 
+                                                     style="width: ${recommendationPercentage}%" 
+                                                     aria-valuenow="${recommendationPercentage}" 
+                                                     aria-valuemin="0" aria-valuemax="100">
+                                                    ${recommendationPercentage.toFixed(0)}%
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                                                                 <div class="recommendation-details">
+                                             <h6 class="text-warning mb-2">Parameter Analysis:</h6>
+                                             ${recommendations.map(rec => `
+                                                 <div class="mb-2 p-2 rounded ${rec.status === 'Recommended' ? 'bg-success bg-opacity-25' : 'bg-danger bg-opacity-25'}" style="word-wrap: break-word; overflow-wrap: break-word;">
+                                                     <strong class="text-light">${rec.param}:</strong> 
+                                                     <span class="text-${rec.status === 'Recommended' ? 'success' : 'danger'}">${rec.status}</span>
+                                                     <small class="d-block text-muted mt-1">${rec.reason}</small>
+                                                 </div>
+                                             `).join('')}
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                }
+                
+                // If no recommendation levels found, create a general recommendation card
+                if (!recommendationHTML) {
+                    recommendationHTML = `
+                        <div class="col-12">
+                            <div class="card bg-secondary bg-opacity-25 border-0 rounded-4">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-info-circle text-info fa-3x mb-3"></i>
+                                    <h5 class="text-info">No Age-Specific Recommendations Available</h5>
+                                    <p class="text-light">Please check the comparison results below for general parameter analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                // Clear the container and set new content
+                recommendationCardsContainer.textContent = '';
+                recommendationCardsContainer.innerHTML = recommendationHTML;
+            } catch (error) {
+                console.error('Error updating recommendation cards:', error);
+                const recommendationCardsContainer = document.getElementById('recommendationCards');
+                if (recommendationCardsContainer) {
+                    recommendationCardsContainer.textContent = '';
+                    recommendationCardsContainer.innerHTML = `
+                        <div class="col-12">
+                            <div class="card bg-secondary bg-opacity-25 border-0 rounded-4">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-exclamation-triangle text-warning fa-3x mb-3"></i>
+                                    <h5 class="text-warning">Error Loading Recommendations</h5>
+                                    <p class="text-light">There was an error loading the recommendation data. Please try refreshing the page.</p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
         }
 
         // Function to get unit for parameter
@@ -604,6 +857,35 @@
             updateSliderValue('verticalSlider', 'verticalValue');
             updateSliderValue('exposureSlider', 'exposureValue');
             updateSliderValue('luxSlider', 'luxValue');
+            
+            // Add event listeners to update recommendation cards when sliders change
+            const sliders = ['cctSlider', 'criSlider', 'flickerSlider', 'glareSlider', 'uniformitySlider', 'melanopicSlider', 'verticalSlider', 'exposureSlider', 'luxSlider'];
+            sliders.forEach(sliderId => {
+                document.getElementById(sliderId).addEventListener('input', function() {
+                    if (apiData && selectedGrade) {
+                        // Clear previous timeout to prevent multiple rapid updates
+                        if (updateTimeout) {
+                            clearTimeout(updateTimeout);
+                        }
+                        
+                        // Debounce the update to prevent excessive re-rendering
+                        updateTimeout = setTimeout(() => {
+                            const currentValues = {
+                                CCT: parseInt(document.getElementById('cctSlider').value),
+                                CRI: parseInt(document.getElementById('criSlider').value),
+                                Flicker: parseInt(document.getElementById('flickerSlider').value),
+                                UGR: parseInt(document.getElementById('glareSlider').value),
+                                Uniformity: parseFloat(document.getElementById('uniformitySlider').value),
+                                Melanopic_EDI: parseInt(document.getElementById('melanopicSlider').value),
+                                Vertical_Illuminance: parseInt(document.getElementById('verticalSlider').value),
+                                Exposure_Duration: parseInt(document.getElementById('exposureSlider').value),
+                                Lux: parseInt(document.getElementById('luxSlider').value)
+                            };
+                            updateRecommendationCards(currentValues, apiData[selectedGrade]);
+                        }, 300); // Wait 300ms after user stops moving slider
+                    }
+                });
+            });
         });
     </script>
 </body>

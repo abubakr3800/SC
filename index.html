@@ -96,7 +96,7 @@
       <!-- Form Section -->
       <div class="row justify-content-center pb-5">
         <div class="col-lg-8 col-md-10 col-12">
-          <div class="card bg-secondary bg-opacity-25 border-0 rounded-4 p-4">
+          <div class="card bg-secondary bg-opacity-25 text-white border-0 rounded-4 p-4">
             <div class="card-body">
               <h2 class="text-center text-danger mb-4">Lighting Quality Simulator</h2>
               
@@ -129,7 +129,7 @@
               </form>
 
               <!-- Results Section -->
-              <div id="results" class="mt-4"></div>
+              <div id="results" class="mt-4 text-white"></div>
 
               <!-- Additional Simulate Button -->
               <div class="text-center mt-3">
@@ -175,7 +175,7 @@
             resultsHTML += `<h5 class="text-info mt-4 mb-2">${param}</h5><ul class="list-unstyled">`;
             data[param].forEach((entry) => {
               resultsHTML += `
-                <li class="mb-3 p-3 bg-secondary bg-opacity-25 rounded">
+                <li class="mb-3 p-3 bg-secondary bg-opacity-25 rounded text-white">
                   <strong class="text-warning">Range:</strong> ${entry.range.min}–${entry.range.max} ${entry.range.unit}<br>
                   <strong class="text-success">Rating:</strong> ${entry.rating}<br>
                   <strong class="text-info">Reason:</strong> ${entry.reason}<br>
