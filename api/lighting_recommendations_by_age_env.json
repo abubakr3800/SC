@@ -1,0 +1,2297 @@
+{
+  "kinder": {
+    "age_range": "3-6",
+    "image": "images/kinder.jpg",
+    "recommendation_levels": {
+      "highly_recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          }
+        }
+      },
+      "recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          }
+        }
+      },
+      "not_recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          }
+        }
+      }
+    }
+  },
+  "primary": {
+    "age_range": "6-12",
+    "image": "images/primary.jpg",
+    "recommendation_levels": {
+      "highly_recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          }
+        }
+      },
+      "recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          }
+        }
+      },
+      "not_recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          }
+        }
+      }
+    }
+  },
+  "adults": {
+    "age_range": "12-18",
+    "image": "images/adults.jpg",
+    "recommendation_levels": {
+      "highly_recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 90,
+                "max": 100,
+                "unit": ""
+              },
+              "reason": "Excellent color rendering.",
+              "recommendation": "Use in sensitive visual tasks."
+            },
+            "CCT": {
+              "range": {
+                "min": 4000,
+                "max": 5000,
+                "unit": "K"
+              },
+              "reason": "Optimal for alertness and concentration.",
+              "recommendation": "Use for reading, exams, or labs."
+            },
+            "Lux": {
+              "range": {
+                "min": 500,
+                "max": 1000,
+                "unit": "lux"
+              },
+              "reason": "Excellent visibility for task performance.",
+              "recommendation": "Use in labs and classrooms."
+            },
+            "UGR": {
+              "range": {
+                "min": 0,
+                "max": 16,
+                "unit": ""
+              },
+              "reason": "Minimal glare, optimal comfort.",
+              "recommendation": "Ideal for detailed tasks."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0,
+                "max": 0.5,
+                "unit": "%"
+              },
+              "reason": "No visible flicker.",
+              "recommendation": "Use flicker-free drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.8,
+                "max": 1,
+                "unit": ""
+              },
+              "reason": "Excellent light balance.",
+              "recommendation": "Supports consistent visibility."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 250,
+                "max": 350,
+                "unit": "lux"
+              },
+              "reason": "Stimulates alertness and circadian health.",
+              "recommendation": "Use in learning periods."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 300,
+                "max": 500,
+                "unit": "lux"
+              },
+              "reason": "Improves face visibility and comfort.",
+              "recommendation": "Use for classrooms and labs."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 6,
+                "max": 8,
+                "unit": "hours"
+              },
+              "reason": "Matches biological and academic schedules.",
+              "recommendation": "Plan consistent lighting exposure."
+            }
+          }
+        }
+      },
+      "recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 80,
+                "max": 89,
+                "unit": ""
+              },
+              "reason": "Good for general learning environments.",
+              "recommendation": "Sufficient for most classrooms."
+            },
+            "CCT": {
+              "range": {
+                "min": 3500,
+                "max": 3999,
+                "unit": "K"
+              },
+              "reason": "Acceptable for mixed activities.",
+              "recommendation": "Good for general use."
+            },
+            "Lux": {
+              "range": {
+                "min": 300,
+                "max": 499,
+                "unit": "lux"
+              },
+              "reason": "Adequate for general use.",
+              "recommendation": "Suitable for reading and writing."
+            },
+            "UGR": {
+              "range": {
+                "min": 17,
+                "max": 19,
+                "unit": ""
+              },
+              "reason": "Acceptable glare levels.",
+              "recommendation": "Usable in classrooms."
+            },
+            "Flicker": {
+              "range": {
+                "min": 0.6,
+                "max": 1,
+                "unit": "%"
+              },
+              "reason": "Low flicker acceptable.",
+              "recommendation": "Ensure certified low flicker."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0.7,
+                "max": 0.79,
+                "unit": ""
+              },
+              "reason": "Moderate balance.",
+              "recommendation": "Usable but needs improvement."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 150,
+                "max": 249,
+                "unit": "lux"
+              },
+              "reason": "Provides partial biological effect.",
+              "recommendation": "Useful in secondary spaces."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 150,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Fair performance for interaction.",
+              "recommendation": "Acceptable in group activities."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 3,
+                "max": 5,
+                "unit": "hours"
+              },
+              "reason": "Useful for part-time programs.",
+              "recommendation": "Balance with daylight access."
+            }
+          }
+        }
+      },
+      "not_recommended": {
+        "environments": {
+          "classroom": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          },
+          "playground": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          },
+          "laboratory": {
+            "CRI": {
+              "range": {
+                "min": 0,
+                "max": 79,
+                "unit": ""
+              },
+              "reason": "Poor color accuracy.",
+              "recommendation": "Avoid in any educational space."
+            },
+            "CCT": {
+              "range": {
+                "min": 0,
+                "max": 3499,
+                "unit": "K"
+              },
+              "reason": "Too warm for learning focus.",
+              "recommendation": "Avoid in learning settings."
+            },
+            "Lux": {
+              "range": {
+                "min": 0,
+                "max": 299,
+                "unit": "lux"
+              },
+              "reason": "Too dim for visual clarity.",
+              "recommendation": "Avoid for primary tasks."
+            },
+            "UGR": {
+              "range": {
+                "min": 20,
+                "max": 30,
+                "unit": ""
+              },
+              "reason": "Excessive glare causes eye strain.",
+              "recommendation": "Avoid in learning zones."
+            },
+            "Flicker": {
+              "range": {
+                "min": 1.1,
+                "max": 100,
+                "unit": "%"
+              },
+              "reason": "Visible flicker may harm students.",
+              "recommendation": "Avoid poor-quality drivers."
+            },
+            "Uniformity": {
+              "range": {
+                "min": 0,
+                "max": 0.69,
+                "unit": ""
+              },
+              "reason": "Uneven lighting can cause confusion.",
+              "recommendation": "Avoid low-uniformity setups."
+            },
+            "Melanopic_EDI": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Insufficient biological stimulation.",
+              "recommendation": "Avoid for full-day exposure."
+            },
+            "Vertical_Illuminance": {
+              "range": {
+                "min": 0,
+                "max": 149,
+                "unit": "lux"
+              },
+              "reason": "Reduces nonverbal visibility.",
+              "recommendation": "Avoid for communication-intensive areas."
+            },
+            "Exposure_Duration": {
+              "range": {
+                "min": 0,
+                "max": 2,
+                "unit": "hours"
+              },
+              "reason": "Too short to be effective.",
+              "recommendation": "Not enough for impact."
+            }
+          }
+        }
+      }
+    }
+  }
+}

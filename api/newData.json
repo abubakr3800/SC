@@ -1,0 +1,56 @@
+{
+    "kinder": {
+        "age_range": "3-6",
+        "CCT": [
+            { "range": { "min": 2700, "max": 3000, "unit": "K" }, "rating": "good", "reason": "Warm white promotes calm and emotional stability.", "recommendation": "Use warm lighting for play and nap areas." },
+            { "range": { "min": 3100, "max": 3999, "unit": "K" }, "rating": "medium", "reason": "Neutral tones are acceptable but not ideal for early development.", "recommendation": "Use with dimming in active zones only." },
+            { "range": { "min": 4000, "max": 6500, "unit": "K" }, "rating": "bad", "reason": "Cool light may overstimulate and disrupt rest.", "recommendation": "Avoid cool-white LEDs in preschool rooms." }
+        ],
+        "Lux": [
+            { "range": { "min": 300, "max": 350, "unit": "lux" }, "rating": "good", "reason": "Provides adequate brightness for safe play.", "recommendation": "Use layered lighting with dim zones." },
+            { "range": { "min": 200, "max": 299, "unit": "lux" }, "rating": "medium", "reason": "May be suitable for quiet zones.", "recommendation": "Use only in rest corners." },
+            { "range": { "min": 0, "max": 199, "unit": "lux" }, "rating": "bad", "reason": "Too dim for visual development.", "recommendation": "Ensure at least 300 lux minimum." }
+        ],
+        "CRI": [
+            { "range": { "min": 90, "max": 100, "unit": "" }, "rating": "good", "reason": "Accurate color rendering supports learning and art.", "recommendation": "Use CRI ≥ 90 in all child-focused spaces." },
+            { "range": { "min": 80, "max": 89, "unit": "" }, "rating": "medium", "reason": "Sufficient for general use but not optimal.", "recommendation": "Consider upgrading for color tasks." },
+            { "range": { "min": 0, "max": 79, "unit": "" }, "rating": "bad", "reason": "May cause color confusion or visual strain.", "recommendation": "Avoid low CRI sources in nurseries." }
+        ]
+    },
+    "primary": {
+        "age_range": "6-12",
+        "CCT": [
+            { "range": { "min": 3500, "max": 4000, "unit": "K" }, "rating": "good", "reason": "Supports focus and alertness.", "recommendation": "Use neutral white for learning zones." },
+            { "range": { "min": 2700, "max": 3400, "unit": "K" }, "rating": "medium", "reason": "Warm tones may reduce focus.", "recommendation": "Limit use to group or break activities." },
+            { "range": { "min": 4100, "max": 6500, "unit": "K" }, "rating": "medium", "reason": "Cool light helps alertness but may cause fatigue.", "recommendation": "Use only in morning hours." }
+        ],
+        "Lux": [
+            { "range": { "min": 500, "max": 700, "unit": "lux" }, "rating": "good", "reason": "Ideal brightness for reading and academic tasks.", "recommendation": "Use with desk and ceiling layering." },
+            { "range": { "min": 350, "max": 499, "unit": "lux" }, "rating": "medium", "reason": "Sufficient for less intense activities.", "recommendation": "Combine with daylight where possible." },
+            { "range": { "min": 0, "max": 349, "unit": "lux" }, "rating": "bad", "reason": "Insufficient lighting causes eye strain.", "recommendation": "Increase brightness to 500+ lux." }
+        ],
+        "CRI": [
+            { "range": { "min": 90, "max": 100, "unit": "" }, "rating": "good", "reason": "Ensures vibrant, accurate visual perception.", "recommendation": "Use in science and art classes." },
+            { "range": { "min": 80, "max": 89, "unit": "" }, "rating": "medium", "reason": "Acceptable for general classrooms.", "recommendation": "Upgrade to high CRI for fine work." },
+            { "range": { "min": 0, "max": 79, "unit": "" }, "rating": "bad", "reason": "Poor color rendering impairs learning.", "recommendation": "Avoid low CRI in primary education." }
+        ]
+    },
+    "adults": {
+        "age_range": "12-18",
+        "CCT": [
+            { "range": { "min": 4000, "max": 5000, "unit": "K" }, "rating": "good", "reason": "Supports cognitive performance and exam focus.", "recommendation": "Use cool-white light during academic periods." },
+            { "range": { "min": 2700, "max": 3900, "unit": "K" }, "rating": "medium", "reason": "Less effective but suitable for discussion zones.", "recommendation": "Apply for group and rest mode." },
+            { "range": { "min": 5100, "max": 6500, "unit": "K" }, "rating": "medium", "reason": "High intensity light may fatigue students.", "recommendation": "Limit to brief exam tasks or labs." }
+        ],
+        "Lux": [
+            { "range": { "min": 500, "max": 750, "unit": "lux" }, "rating": "good", "reason": "Provides clarity and reduces drowsiness.", "recommendation": "Ensure layered lighting with directionality." },
+            { "range": { "min": 350, "max": 499, "unit": "lux" }, "rating": "medium", "reason": "Tolerable for general classwork.", "recommendation": "Enhance with task lighting." },
+            { "range": { "min": 0, "max": 349, "unit": "lux" }, "rating": "bad", "reason": "Too dim for teenage cognitive efficiency.", "recommendation": "Avoid underlit study spaces." }
+        ],
+        "CRI": [
+            { "range": { "min": 90, "max": 100, "unit": "" }, "rating": "good", "reason": "Essential for technical accuracy in labs.", "recommendation": "Use especially in science, design, and media rooms." },
+            { "range": { "min": 80, "max": 89, "unit": "" }, "rating": "medium", "reason": "Acceptable for normal classroom use.", "recommendation": "Upgrade where high color accuracy is critical." },
+            { "range": { "min": 0, "max": 79, "unit": "" }, "rating": "bad", "reason": "Subpar visual quality hampers concentration.", "recommendation": "Replace outdated or cheap LEDs." }
+        ]
+    }
+}
