@@ -668,16 +668,26 @@
             for (let param in gradeData) {
                 if (param === 'age_range') continue;
                 const currentValue = currentValues[param];
-                const recommendations = gradeData[param];
+                let recommendations = gradeData[param];
 
                 let bestMatch = null;
                 let bestRating = 'unknown';
-                recommendations.forEach((rec) => {
-                    if (currentValue >= rec.range.min && currentValue <= rec.range.max) {
-                        bestMatch = rec;
-                        bestRating = rec.rating;
-                    }
-                });
+                recommendations = gradeData.recommendation_levels || [];
+                console.log(recommendations);
+                // recommendations.forEach((rec) => {
+                console.log(recommendations.highly_recommended.environments[getCookie("selectedEnvironment")]);
+                
+                    recommendations.highly_recommended.environments.forEach((env) => {
+                        if (env === selectedEnvironment) {
+                            rec.range = rec.highly_recommended.range;
+                            rec.rating = 'good';
+                        }
+                    });
+                    // if (currentValue >= rec.range.min && currentValue <= rec.range.max) {
+                    //     bestMatch = rec;
+                    //     bestRating = rec.rating;
+                    // }
+                // });
 
                 comparisonHTML += `
                     <div class="col-md-6 col-lg-4 mb-4">
